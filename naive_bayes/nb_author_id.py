@@ -27,6 +27,9 @@ features_train, features_test, labels_train, labels_test = preprocess()
 #########################################################
 ### your code goes here ###
 #Peter Manca
+##The features here are the words in the emails
+##The labels are the authors, Chris and Sara. 
+
 ##First we need to import the Gaussian Naive Bayes model and the accuracy score function
 from sklearn.naive_bayes import GaussianNB
 from sklearn.metrics import accuracy_score
