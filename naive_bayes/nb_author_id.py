@@ -34,7 +34,7 @@ features_train, features_test, labels_train, labels_test = preprocess()
 from sklearn.naive_bayes import GaussianNB
 from sklearn.metrics import accuracy_score
 
-#set up Gaussian naive Bayes model
+#set up Gaussian naive Bayes model clf stands for classifier
 clf = GaussianNB()
 
 #Part 2: set up timer
