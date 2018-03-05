@@ -31,9 +31,26 @@ plt.show()
 ### your code here!  name your classifier object clf if you want the 
 ### visualization code (prettyPicture) to show you the decision boundary
 
+#First I had to install the matplotlib 
+#pip install matplotlib
 
+#Import Random Forest(Ensemble algorithm) algorithm and accuracy
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.metrics import accuracy_score
 
+#create classifier with no parameters
+clf = RandomForestClassifier()
 
+#fit the classifier and train it with test data
+clf.fit(features_train,labels_train)
+
+#Test the model now to get an accurate prediction
+prd = clf.predict(features_test)
+
+#Get how accurate the prediction was.  we sucked in this function above
+print "Accuracy:", accuracy_score(labels_test, prd)
+
+#Accuract result was .92
 
 
 

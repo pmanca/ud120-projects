@@ -24,8 +24,25 @@ features_train, features_test, labels_train, labels_test = preprocess()
 
 #########################################################
 ### your code goes here ###
+#Import Decistion tree algorithm and accuracy
+from sklearn import tree
+from sklearn.metrics import accuracy_score
 
+#set up classifier (part 1) and give it a minimal saples split of 40
+clf = tree.DecisionTreeClassifier(min_samples_split=40)
 
-#########################################################
+#train the model
+clf.fit(features_train, labels_train)
+
+#Test the model now to get an accurate prediction
+prd = clf.predict(features_test)
+
+#Get how accurate the prediction was.  we sucked in this function above
+print "Accuracy:", accuracy_score(labels_test, prd)
+
+#Part 2 use the given line of code to determine how many featues are in the dataset
+#num = len(features_train[0])
+print "The number of features are", len(features_train[0])
+
 
 
